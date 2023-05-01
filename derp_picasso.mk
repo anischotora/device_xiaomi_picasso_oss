@@ -16,7 +16,8 @@ $(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # DerpFest Specific Features
 TARGET_FACE_UNLOCK_SUPPORTED := true
-DERP_BUILDTYPE := Community
+DERP_RELEASE := true
+DERP_BUILDTYPE := Official
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := derp_picasso
