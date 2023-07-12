@@ -11,16 +11,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from picasso device
 $(call inherit-product, device/xiaomi/picasso/device.mk)
 
-# Inherit some common DerpFest stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
-
-# DerpFest Specific Features
-TARGET_FACE_UNLOCK_SUPPORTED := true
-DERP_RELEASE := true
-DERP_BUILDTYPE := Official
+# Inherit some common cherish stuff.
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := derp_picasso
+PRODUCT_NAME := cherish_picasso
 PRODUCT_DEVICE := picasso
 PRODUCT_MODEL := Redmi K30 5G
 PRODUCT_BRAND := Redmi
@@ -38,3 +33,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 BUILD_FINGERPRINT := Redmi/picasso/picasso:12/SKQ1.211006.001/V13.0.5.0.SGICNXM:user/release-keys
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.cherish.maintainer="alosrobot"
+CHERISH_BUILD_TYPE := OFFICIAL

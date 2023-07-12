@@ -26,4 +26,4 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
 TARGET_KERNEL_CONFIG := vendor/picasso_user_defconfig
 
 # Inherit from the proprietary version
-include vendor/xiaomi/picasso/BoardConfigVendor.mk
+include vendor/xiaomi/sm7250-common/BoardConfigVendor.mk
